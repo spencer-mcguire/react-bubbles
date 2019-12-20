@@ -22,24 +22,33 @@ export const NewColorForm = ({ setAdd, updateColors }) => {
   };
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="color"
-        value={newColor.color}
-        onChange={e => setNewColor({ ...newColor, color: e.target.value })}
-        placeholder="color"
-      />
-      <input
-        type="text"
-        name="hex"
-        value={newColor.code.hex}
-        onChange={e =>
-          setNewColor({ ...newColor, code: { hex: e.target.value } })
-        }
-        placeholder="hex code"
-      />
-      <button> Add New Color</button>
-      <button onClick={() => setAdd(false)}> Cancel </button>
+      <legend>Add color</legend>
+      <label>
+        color name:
+        <input
+          type="text"
+          name="color"
+          value={newColor.color}
+          onChange={e => setNewColor({ ...newColor, color: e.target.value })}
+          placeholder="color"
+        />
+      </label>
+      <label>
+        hex code:
+        <input
+          type="text"
+          name="hex"
+          value={newColor.code.hex}
+          onChange={e =>
+            setNewColor({ ...newColor, code: { hex: e.target.value } })
+          }
+          placeholder="hex code"
+        />
+      </label>
+      <div className="button-row">
+        <button> Add </button>
+        <button onClick={() => setAdd(false)}> Cancel </button>
+      </div>
     </form>
   );
 };
