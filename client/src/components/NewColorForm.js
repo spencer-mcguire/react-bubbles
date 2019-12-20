@@ -13,7 +13,11 @@ export const NewColorForm = ({ setAdd, updateColors }) => {
     e.preventDefault();
     axiosWithAuth()
       .post("/colors", newColor)
-      .then(res => updateColors(res.data))
+      .then(res => {
+        setNewColor(initialState);
+        setAdd(false);
+        updateColors(res.data);
+      })
       .catch(err => console.log(err));
   };
   return (

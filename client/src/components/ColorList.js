@@ -91,7 +91,7 @@ const ColorList = ({ colors, updateColors }) => {
           </div>
         </form>
       )}
-      <div className="spacer" />
+      <div />
       {add && <NewColorForm setAdd={setAdd} updateColors={updateColors} />}
     </div>
   );
