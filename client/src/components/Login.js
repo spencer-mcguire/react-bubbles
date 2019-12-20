@@ -41,12 +41,14 @@ const Login = props => {
           name="username"
           value={creds.username}
           onChange={handleChange}
+          placeholder="username"
         />
         <input
           type="password"
           name="password"
           value={creds.password}
           onChange={handleChange}
+          placeholder="password"
         />
         <button>Login</button>
       </form>
