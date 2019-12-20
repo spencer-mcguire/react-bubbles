@@ -8,14 +8,6 @@ const initialState = {
 
 export const NewColorForm = ({ setAdd, updateColors }) => {
   const [newColor, setNewColor] = useState(initialState);
-  console.log(newColor);
-  const handleChanges = e => {
-    setNewColor({
-      ...newColor,
-      color: e.target.value,
-      code: { hex: e.target.value }
-    });
-  };
 
   const handleSubmit = e => {
     e.preventDefault();
